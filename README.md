@@ -19,7 +19,23 @@ TODO
     ```
   
     tests: разобраться с dummy
-3. прикрутить опциональную поддержку markdown
+3. прикрутить https://github.com/octokit/octokit.rb
+   
+   извлекать из репозитория текст файла, лежащего в @path 
+4. прикрутить опциональную поддержку markdown
+
+    ```ruby
+    # helper
+    def process_content(content) 
+      if defined? Redcarpet 
+        markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+        markdown.render(content)
+      else
+        content
+      end
+    end
+    ```
+5. поддержка локалей: запросили /about, а найдется или repo/about.md или repo/about.ru.md
 
 
 @path нужна для простановки заголовков
