@@ -11,8 +11,8 @@ TODO
 2. pages controller:
     ```ruby
     #READ: http://guides.rubyonrails.org/routing.html  #3.11 Route Globbing and Wildcard Segments
-    get '*path', to: 'pages#show'
-    @path = params[:path] #=> /about
+    get '*path', to: 'pages#show' # routing
+    @path = params[:path] #=> /about # GithubPagesRails::PagesController#show
     ```
   
     view:
