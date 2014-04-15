@@ -1,11 +1,13 @@
 github_pages_rails
 ==================
 
-
 TODO
 ====
 
 1. создать пустой rails engine http://guides.rubyonrails.org/engines.html
+
+   выполни: rails plugin new github_pages_rails --mountable 
+   
 2. pages controller:
     ```ruby
     #READ: http://guides.rubyonrails.org/routing.html  #3.11 Route Globbing and Wildcard Segments
