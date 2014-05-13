@@ -48,5 +48,10 @@ TODO
 - title t(@path.gsub('/', '.'))
 = markdown @content
 ```
-    
+
+{@ title}
+{@ desctiption}
+
+маркдаун их не покажет, а потом пройтись другми парсером
+
   
