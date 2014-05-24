@@ -1,7 +1,5 @@
-require_dependency "github_pages_rails/application_controller"
-
 module GithubPagesRails
-  class PagesController < ApplicationController
+  class PagesController < GithubPagesRails.parent_controller.constantize
     def show
       result = Octokit.contents(GithubPagesRails.repository, path: "#{params[:id]}.md")
       content64 = result[:content]
