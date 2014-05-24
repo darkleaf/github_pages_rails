@@ -5,4 +5,5 @@ require 'liquid'
 require 'meta-tags'
 
 module GithubPagesRails
+  mattr_accessor :repository
 end

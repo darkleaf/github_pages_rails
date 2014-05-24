@@ -1,3 +1,3 @@
 GithubPagesRails::Engine.routes.draw do
-  resources :pages
+  get '*id', to: "pages#show"
 end
