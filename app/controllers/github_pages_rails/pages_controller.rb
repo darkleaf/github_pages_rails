@@ -7,13 +7,17 @@ module GithubPagesRails
       content64 = result[:content]
       content = Base64.decode64(content64)
 
+      rendered_liquid = render_liquid(content)
 
-
-      rendered = render_md(content)
+      rendered = render_md(rendered_liquid)
 
       render text: rendered
     end
 
+    def render_liquid(content)
+      template = Liquid::Template.parse(content)
+      template.render({})
+    end
 
     def render_md(content)
       renderer = Redcarpet::Render::HTML
