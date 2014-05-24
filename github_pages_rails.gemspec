@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.1"
   s.add_dependency "octokit", "~> 3.0"
+  s.add_dependency "redcarpet", "~> 3.1.2"
 end

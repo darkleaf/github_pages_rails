@@ -6,7 +6,23 @@ module GithubPagesRails
       result = Octokit.contents("darkleaf/github_pages_rails_example", path: 'about.md.liquid')
       content64 = result[:content]
       content = Base64.decode64(content64)
-      render text: content
+
+
+
+      rendered = render_md(content)
+
+      render text: rendered
+    end
+
+
+    def render_md(content)
+      renderer = Redcarpet::Render::HTML
+      options = {
+        autolink: true,
+        fenced_code_blocks: true
+      }
+      markdown = Redcarpet::Markdown.new renderer, options
+      markdown.render(content)
     end
   end
 end
