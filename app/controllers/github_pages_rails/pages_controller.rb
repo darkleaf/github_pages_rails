@@ -11,12 +11,12 @@ module GithubPagesRails
 
       rendered = render_md(rendered_liquid)
 
-      render text: rendered
+      @content = rendered
     end
 
     def render_liquid(content)
       template = Liquid::Template.parse(content)
-      template.render({})
+      template.render( { }, { registers: {controller: self}})
     end
 
     def render_md(content)
@@ -28,5 +28,7 @@ module GithubPagesRails
       markdown = Redcarpet::Markdown.new renderer, options
       markdown.render(content)
     end
+
+
   end
 end
