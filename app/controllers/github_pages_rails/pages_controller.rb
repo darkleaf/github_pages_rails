@@ -2,6 +2,9 @@ module GithubPagesRails
   class PagesController < GithubPagesRails.parent_controller.constantize
     def show
       result = Octokit.contents(GithubPagesRails.repository, path: "#{params[:id]}.md")
+
+      p result
+
       content64 = result[:content]
       content = Base64.decode64(content64)
 

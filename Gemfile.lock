@@ -7,6 +7,7 @@ PATH
       octokit (~> 3.0)
       rails (~> 4.1.1)
       redcarpet (~> 3.1.2)
+      webmock (~> 1.18.0)
 
 GEM
   remote: https://rubygems.org/
@@ -40,6 +41,8 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     erubis (2.7.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -79,6 +82,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
     redcarpet (3.1.2)
+    safe_yaml (1.0.3)
     sawyer (0.5.4)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -99,6 +103,9 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
+    webmock (1.18.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby

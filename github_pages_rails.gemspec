@@ -22,4 +22,5 @@ Gem::Specification.new do |s|
   s.add_dependency "redcarpet", "~> 3.1.2"
   s.add_dependency "liquid", "~> 2.6.0"
   s.add_dependency "meta-tags", "~> 2.0.0"
+  s.add_dependency "webmock", "~> 1.18.0"
 end
